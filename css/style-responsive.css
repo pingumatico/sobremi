@@ -1,0 +1,160 @@
+@media screen and (max-width: 768px) {
+
+  .nav-container {
+    margin: auto;
+    max-width: 1100px;
+    overflow: auto;
+    padding: 0px;
+  }
+
+  .navbar {
+    position: relative;
+    top: 0;
+  }
+
+  .navbar .logo {
+    float: none;
+    text-align: center;
+    padding-top: 10px;
+  }
+
+  .navbar ul,
+  .navbar ul li {
+    float: none;
+  }
+
+  .navbar ul li a {
+    padding: 10px;
+  }
+
+  .section-header {
+    font-size: 1.5em;
+  }
+
+  .banner-title {
+    font-size: 1.7em;
+  }
+
+  .banner-video {
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .banner-video .video-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 0;
+  }
+
+  .banner-video .banner-header-text {
+    position: relative;
+    z-index: 2;
+    margin-top: 0;
+    text-align: center;
+    padding: 0 20px;
+    display: grid;
+    place-content: center;
+    height: 100%;
+    backdrop-filter: brightness(45%);
+  }
+  
+  .banner-header-text {
+    height: 200px;
+  }
+
+  .portfolio .portfolio-nav {
+    display: none;
+  }
+
+  .card-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .box {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .box img {
+    width: 100%;
+  }
+
+  .card-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .form-map {
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .single-project .description h4 {
+    font-size: 1em;
+  }
+
+  .single-project-info {
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+  }
+
+  .single-project-details {
+    text-align: center;
+  }
+
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .about iframe {
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .title:before {
+    font-size: 0.8rem;
+  }
+
+  .section {
+    padding: 30px 0;
+  }
+
+  .text {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  .indexnav {
+    margin-bottom: 30px;
+  }
+  .logo {
+    padding-bottom: 30px;
+  }
+
+    .textskills {
+    text-align: left;
+    padding: 0 20px;
+    margin-top: 10px;
+  }
+
+  .textskills ul {
+    padding: 0;
+  }
+
+  .textskills li {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}
