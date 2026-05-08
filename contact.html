@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-responsive.css" />
+
+    <title>Contacto</title>
+  </head>
+
+  <body>
+
+    <main>
+      <!-- NAVBAR -->
+      <header>
+        <section class="banner-video  bg-abco">
+          <video autoplay muted loop playsinline class="video-bg bg-abco">
+            <source src="./img/Chefs_Kiss.mp4" type="video/mp4">
+          </video>
+
+        <nav class="navbar abco">
+          <div class="nav-container">
+
+            <ul id="main-nav" class="txt-btn">
+                        <button class="reproductor re-r" controls autoplay loop>Reproducir</button>
+      <audio  loop src=""></audio>
+<script>
+const boton = document.querySelector(".reproductor");
+const audio = document.querySelector("audio");
+const rutaAudio = "./font/Yus-Investigation.mp3";
+
+window.addEventListener("load", () => {
+  const tiempoGuardado = localStorage.getItem("audioTiempo");
+  const estabaActivo = localStorage.getItem("audioActivo") === "true";
+
+  if (tiempoGuardado) {
+    audio.src = rutaAudio;
+    audio.addEventListener("loadedmetadata", () => {
+      audio.currentTime = parseFloat(tiempoGuardado);
+      if (estabaActivo) {
+        audio.play();
+      }
+    }, { once: true });
+  }
+});
+
+boton.addEventListener("click", () => {
+  audio.src = rutaAudio;
+  audio.play();
+  localStorage.setItem("audioActivo", "true");
+});
+
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("audioTiempo", audio.currentTime);
+});
+
+window.addEventListener("pagehide", () => {
+  localStorage.setItem("audioTiempo", audio.currentTime);
+  localStorage.setItem("audioActivo", !audio.paused ? "true" : "false");
+});
+</script>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="about.html">Intereses</a></li>
+              <li><a class="current" href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+
+          <div class="banner-header-text">
+            <p class="banner-title"><span>Contáctame</span></p>
+          </div>
+        </section>
+      </header>
+
+      <section class="contact section">
+        <div class="section-header">
+          <p class="title" data-title="Escríbeme o contáctame"></p>
+        </div>
+
+        <!-- Discord -->
+        <div class="box-contact-features">
+          <i class="fas fa-map-marker-alt fa-2x"></i>
+          <p class="line-break">Discord</p>
+
+          <p>
+            Enlace:
+            <span>
+              <a
+                href="https://discord.gg/4T384QBwkh"
+                target="_blank"
+                style="color:#00f2ea;"
+              >
+                RIDES
+              </a>
+            </span>
+          </p>
+        </div>
+
+        <div class="box-contact-features">
+          <i class="fas fa-mobile-alt fa-2x"></i>
+          <p class="line-break">Youtube</p>
+          <p>
+            Enlace:
+            <span>
+              <a
+                href="https://www.youtube.com/channel/UCXNoWfQXmgTevBkXs6y-ywQ"
+                target="_blank"
+                style="color:#00f2ea;"
+              >
+                Pingumático
+              </a>
+            </span>
+          </p>
+        </div>
+
+        <!-- Twitter -->
+        <div class="box-contact-features">
+          <i class="fas fa-envelope fa-2x"></i>
+          <p class="line-break">Twitter</p>
+          <p class="line-break">Usuario: Proximamente</p>
+
+          <p>
+            Enlace:
+            <span>
+              <a
+                href=""
+                target="_blank"
+                style="color:#00f2ea;"
+              >
+                Proximamente
+              </a>
+            </span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer class="main-footer">
+      <div class="container">
+        <p class="small">Pingumático 2026 &copy;</p>
+    </footer>
+  </body>
+</html>

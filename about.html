@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+      integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-responsive.css" />
+    <title>Acerca de mí</title>
+  </head>
+  <body>
+
+
+    <main>
+      <header>
+
+         <section class="banner-video  bg-abco">
+          <video autoplay muted loop playsinline class="video-bg bg-abco">
+            <source src="./img/Chefs_Kiss.mp4" type="video/mp4">
+          </video>
+
+        <nav class="navbar abco">
+          <div class="nav-container">
+            <ul id="main-nav" class="txt-btn">
+                        <button class="reproductor re-r" controls autoplay loop>Reproducir</button>
+      <audio  loop src=""></audio>
+      <script>
+        const boton = document.querySelector(".reproductor");
+        const audio = document.querySelector("audio");
+        const rutaAudio = "./font/Yus-Investigation.mp3";
+        
+        window.addEventListener("load", () => {
+         const tiempoGuardado = localStorage.getItem("audioTiempo");
+         const estabaActivo = localStorage.getItem("audioActivo") === "true";
+         
+         if (tiempoGuardado) {
+          audio.src = rutaAudio;
+          audio.addEventListener("loadedmetadata", () => {
+          audio.currentTime = parseFloat(tiempoGuardado);
+          if (estabaActivo) {
+          audio.play();
+      }
+    }, { once: true });
+  }
+});
+
+// Reproducir
+boton.addEventListener("click", () => {
+  audio.src = rutaAudio;
+  audio.play();
+  localStorage.setItem("audioActivo", "true");
+});
+
+// Guardar tiempo mientras suena
+audio.addEventListener("timeupdate", () => {
+  localStorage.setItem("audioTiempo", audio.currentTime);
+});
+
+// Guardar justo antes de salir de la página
+window.addEventListener("pagehide", () => {
+  localStorage.setItem("audioTiempo", audio.currentTime);
+  localStorage.setItem("audioActivo", !audio.paused ? "true" : "false");
+});
+      </script>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a class="current" href="about.html">Intereses</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="banner-header-text">
+          <p class="banner-title"><span>Mis intereses</span></p>
+        </div>
+      </section>
+    </header>
+
+
+      <section class="section about">
+        <div class="container">
+          <div class="section-header">
+            <p class="title" data-title="Mis pasatiempos"></p>
+          </div>
+
+        <div class="textskills">
+            <ul>
+              <li>Me gusta la reparación de celulares.</li>
+              <li>Me gusta el Nawat.</li>
+              <li>Me gusta un poco Matemáticas.</li>
+              <li>Me gusta la historia de origen de El Salvador antes y después de su colonización.</li>
+              <li>Me gusta temas sobre el emprendedurismo.</li>
+              <li>Me gustan la orientación para la vida.</li>
+              <li>Hago cursos de cualquier cosa que me encuentre.</li>
+              <li>Jugador de juegos gacha.</li>
+              <li>Me gusta la ortografía y gramática.</li>
+              <li>Me gusta armar figuritas de papel.</li>
+              <li>Decoro cuadernos con impresiones editadas por mi.</li>
+            </ul>
+          </div>
+          <div class="skills">
+            <div class="card-skill">
+              <img src="img/portfolio/html.jpg" alt="" />
+            </div>
+
+            <div class="card-skill">
+              <img src="img/portfolio/css.png" alt="" />
+            </div>
+
+            <div class="card-skill">
+              <img src="img/portfolio/javascript.png" alt="" />
+            </div>
+
+            <div class="card-skill">
+              <img src="img/portfolio/github.png" alt="" />
+            </div>
+
+            <div class="card-skill">
+              <img src="img/portfolio/node.png" alt="" />
+            </div>
+
+            <div class="card-skill">
+              <img src="img/portfolio/mongo.png" alt="" />
+            </div>
+          </div>
+          <div>
+<iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/2mVrT_zQS8E"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+  allowfullscreen
+></iframe>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+
+    <footer class="main-footer">
+      <div class="container">
+        <p class="small">Pingumático 2026 &copy;</p>
+    </footer>
+  </body>
+</html>
